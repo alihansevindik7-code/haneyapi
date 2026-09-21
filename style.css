@@ -1,0 +1,153 @@
+/* Genel Sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Üst Kısım (Header): Logo ve Yazıyı Yan Yana Getirir */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;    /* Dikeyde tam ortalar */
+    gap: 20px;              /* Logo ile yazı arasındaki boşluk */
+    text-align: left;
+}
+
+/* Logo Tasarımı */
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;    /* Tam daire yapar */
+    object-fit: cover;     /* Resmi oranını bozmadan doldurur */
+    mix-blend-mode: multiply; 
+    filter: brightness(1.2) contrast(1.2);
+    flex-shrink: 0;        /* Ekran küçülünce logonun büzülmesini engeller */
+    margin: 0;
+}
+
+/* Header Yazı Grubu */
+.header-text {
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    text-align: left;
+}
+
+/* Ana Kapsayıcı: İki Satırlı Düzen (Galeri Altta 3'lü Kutular) */
+.container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column; /* İçindekileri üst üste iki satır olarak dizer */
+    gap: 30px;
+}
+
+/* Üst Satır: Kaydırmalı Görsel Alanı (Galeri) */
+.galeri-kutusu {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.galeri-kutusu h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Fotoğrafların Yan Yana Dizilip Kaydırıldığı Alan */
+.slider-alani {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;       /* Fotoğraflar taşarsa yatay kaydırma çubuğu çıkarır */
+    padding-bottom: 10px;   /* Kaydırma çubuğu için alt boşluk */
+}
+
+/* Galerideki Her Bir Fotoğrafın Boyutu */
+.slider-alani img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Alt Satır: Yan Yana Duran 3 Ana Kutu */
+.alt-kutular {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.alt-kutular section {
+    flex: 1;                /* Üç kutunun da eşit genişlikte olmasını sağlar */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.alt-kutular section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* İletişim Butonu */
+.btn {
+    display: inline-block;
+    background: #27ae60;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #219653;
+}
+
+/* Alt Bilgi (Footer) */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
