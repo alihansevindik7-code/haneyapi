@@ -151,3 +151,32 @@ footer {
     color: #7f8c8d;
     font-size: 0.9rem;
 }
+
+/* --- MOBİL UYUM (Ekran 768 pikselden küçükse çalışır) --- */
+@media (max-width: 768px) {
+
+    /* 1. Üst kısımdaki logo ve yazıyı alt alta ortala */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .header-text, 
+    .header-text h1, 
+    .header-text p {
+        text-align: center;
+    }
+
+    /* 2. Alttaki 3 kutuyu yan yana olmaktan çıkarıp alt alta diz */
+    .alt-kutular {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 3. Görsel galerisini telefonda daha rahat kaydırılabilir yap */
+    .slider-alani img {
+        width: 240px;
+        height: 160px;
+    }
+}
